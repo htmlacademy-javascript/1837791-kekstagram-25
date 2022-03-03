@@ -8,5 +8,5 @@ function getRandomInRange(min, max) {
 
 //Функция, проверяющая длину строки (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length):
 function checkStringLength(string, maxlength) {
-  return string.length > maxlength;
+  return string.length >= maxlength;
 }
