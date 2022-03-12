@@ -70,4 +70,4 @@ function checkStringLength(string, maxlength) {
   return string.length >= maxlength;
 }
 
-checkStringLength('string', 10); //что бы eslint не ругался
+checkStringLength('similarDescription', 10); //что бы eslint не ругался
