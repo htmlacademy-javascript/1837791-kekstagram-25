@@ -3,7 +3,7 @@ const COMMENTS_AVATAR = fillAvatarUrl(6);
 const COMMENTS_MESSAGE = ['Всё отлично!',
   'В целом всё неплохо. Но не всё.',
   'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
- 'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
+  'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'];
 const COMMENTS_NAMES = ['Василий', 'Иван', 'Егор', 'Игорь', 'Тарас', 'Марк'];
@@ -12,6 +12,9 @@ const PHOTO_URL = fillUrl(25);
 const PHOTO_DESCRIPTION = ['Овощные культуры','Ягоды','Стручковые','Бобовые','Грибы'];
 const PHOTO_LIKES = fillArray(25).slice(14); //число лайков - массив от 15 до 200
 
+const getRandomArrayElement = (elements) => {
+  return elements[getRandomInRange(0, elements.length - 1)];
+};
 
 
 // Строим комментарии
@@ -29,7 +32,7 @@ const similarComments = Array.from({length:6}, createComments);
 
 
 // Строим описание фотографии
-const createDescription = () => {
+const createDescription = () =>{
   return {
     id: getRandomArrayElement(PHOTO_ID),
     url: getRandomArrayElement(PHOTO_URL),
@@ -47,9 +50,6 @@ const similarDescription = Array.from({length:25}, createDescription);
 
 // !Вспомогательные функции!
 
-const getRandomArrayElement = (elements) => {
-  return elements[getRandomInRange(0, elements.length - 1)];
-};
 
 //Функция, заполняющая массив числами по порядку до максимального
 function fillArray(max) {
