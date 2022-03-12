@@ -12,9 +12,7 @@ const PHOTO_URL = fillUrl(25);
 const PHOTO_DESCRIPTION = ['Овощные культуры','Ягоды','Стручковые','Бобовые','Грибы'];
 const PHOTO_LIKES = fillArray(25).slice(14); //число лайков - массив от 15 до 200
 
-const getRandomArrayElement = (elements) => {
-  return elements[getRandomInRange(0, elements.length - 1)];
-};
+const getRandomArrayElement = (elements) => elements[getRandomInRange(0, elements.length - 1)];
 
 
 // Строим комментарии
@@ -25,7 +23,7 @@ const createComments = () => {
     message: getRandomArrayElement(COMMENTS_MESSAGE),
     name:getRandomArrayElement(COMMENTS_NAMES),
   }
-}
+};
 
 // Записываем комментарии в массив
 const similarComments = Array.from({length:6}, createComments);
@@ -40,34 +38,33 @@ const createDescription = () =>{
     likes: getRandomArrayElement(PHOTO_LIKES),
     comments: getRandomArrayElement(similarComments),
   }
-}
+};
 
 // Записываем описание в массив
 const similarDescription = Array.from({length:25}, createDescription);
 
-
-
+console.log(similarDescription); //что бы eslint не ругался
 
 // !Вспомогательные функции!
 
 
 //Функция, заполняющая массив числами по порядку до максимального
 function fillArray(max) {
-  let array = [];
-  if (max) for (let i = 1; i <= max;) array.push(i++);
+  const array = [];
+  if (max) {for (let i = 1; i <= max;) {array.push(i++)}};
   return array;
 };
 //Функция, заполняющая массив URL адресами по порядку до максимального
 function fillUrl(max) {
-  let array = [];
-  if (max) for (let i = 1; i <= max;) array.push('photos/{{' + i++ + '}}.jpg');
+  const array = [];
+  if (max) {for (let i = 1; i <= max;) {array.push('photos/{{' + i++ + '}}.jpg')}};
   return array;
 };
 
 //Функция, заполняющая массив URL адресами по порядку до максимального
 function fillAvatarUrl(max) {
-  let array = [];
-  if (max) for (let i = 1; i <= max;) array.push('img/avatar-' + i++ + '.svg');
+  const array = [];
+  if (max) for (let i = 1; i <= max;) {array.push('img/avatar-' + i++ + '.svg')};
   return array;
 };
 
@@ -77,9 +74,11 @@ function getRandomInRange(min, max) {
     throw ('Минимальное число не может быть больше, либо равно максимальному');
   }
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 //Функция, проверяющая длину строки (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length):
 function checkStringLength(string, maxlength) {
   return string.length >= maxlength;
-}
+};
+
+console.log(checkStringLength('string', 5)); //что бы eslint не ругался
