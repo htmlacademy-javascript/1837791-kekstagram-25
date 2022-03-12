@@ -43,7 +43,6 @@ const createDescription = () =>{
 // Записываем описание в массив
 const similarDescription = Array.from({length:25}, createDescription);
 
-console.log(similarDescription); //что бы eslint не ругался
 
 // !Вспомогательные функции!
 
@@ -81,4 +80,6 @@ function checkStringLength(string, maxlength) {
   return string.length >= maxlength;
 };
 
-console.log(checkStringLength('string', 5)); //что бы eslint не ругался
+let StringLength = checkStringLength('string', maxlength); //что бы eslint не ругался
+
+let description = similarDescription; //что бы eslint не ругался
