@@ -22,7 +22,7 @@ const createComments = () => {
     avatar: 'img/avatar-' + getRandomArrayElement(COMMENTS_AVATAR) + '.svg',
     message: getRandomArrayElement(COMMENTS_MESSAGE),
     name:getRandomArrayElement(COMMENTS_NAMES),
-  }
+  };
 };
 
 // Записываем комментарии в массив
@@ -37,7 +37,7 @@ const createDescription = () => {
     description: getRandomArrayElement(PHOTO_DESCRIPTION),
     likes: getRandomArrayElement(PHOTO_LIKES),
     comments: getRandomArrayElement(similarComments),
-  }
+  };
 };
 
 // Записываем описание в массив
@@ -50,7 +50,10 @@ const similarDescription = Array.from({length:25}, createDescription);
 //Функция, заполняющая массив числами по порядку до максимального
 function fillArray(max) {
   const array = [];
-  if (max) {for (let i = 1; i <= max;) {array.push(i++)}};
+  if (max) {for (let i = 1; i <= max;) {
+    array.push(i++)
+    };
+  };
   return array;
 }
 
