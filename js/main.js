@@ -51,9 +51,9 @@ const similarDescription = Array.from({length:25}, createDescription);
 function fillArray(max) {
   const array = [];
   if (max) {for (let i = 1; i <= max;) {
-    array.push(i++)
-    };
-  };
+    array.push(i++);
+  }
+  }
   return array;
 }
 
@@ -71,5 +71,3 @@ function checkStringLength(string, maxlength) {
 }
 
 checkStringLength('string', 10); //что бы eslint не ругался
-
-similarDescription; //что бы eslint не ругался
