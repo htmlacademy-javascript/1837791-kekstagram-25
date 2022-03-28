@@ -42,3 +42,5 @@ function createCards(amount){
 
 checkStringLength('similarDescription', EXAMPLE_NUMBER); //что бы eslint не ругался
 createCards(MAX_CARDS);
+
+export {createCards};
