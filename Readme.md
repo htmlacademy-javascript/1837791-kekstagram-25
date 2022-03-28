@@ -1,7 +1,11 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Виталий Шарапов](https://up.htmlacademy.ru/javascript/25/user/1837791).
+<<<<<<< HEAD
 * Наставник: [Андрей Устименко](https://htmlacademy.ru/profile/spiritmoon).
+=======
+* Наставник: [Роман Кушнир](https://htmlacademy.ru/profile/id485545).
+>>>>>>> 2a9b4710f0ae3d09f927fad24ac816d4c407f8e0
 
 ---
 
