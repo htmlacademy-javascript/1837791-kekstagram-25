@@ -11,4 +11,5 @@ function checkStringLength(string, maxlength) {
   return string.length >= maxlength;
 }
 
+
 export {getRandomInRange, checkStringLength};
