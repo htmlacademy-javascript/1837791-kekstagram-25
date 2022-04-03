@@ -1,2 +1,2 @@
 import './data';
-import 'miatures.js';
+import './miniatures';
