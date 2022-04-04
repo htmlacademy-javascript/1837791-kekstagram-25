@@ -14,7 +14,7 @@ function createPhotoItem (photoObject) {
 }
 
 // функция для добавления готовых узлов из шаблонов в DOM
-function createUserElement (photoCards) {
+function renderUserElement (photoCards) {
   const similarListFragment = document.createDocumentFragment();
   for (const cards of photoCards) {
     const photoElement = createPhotoItem (cards);
@@ -23,4 +23,4 @@ function createUserElement (photoCards) {
   userPhotos.appendChild(similarListFragment);
 }
 
-createUserElement(userCards);
+renderUserElement(userCards);

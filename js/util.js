@@ -11,5 +11,7 @@ function checkStringLength(string, maxlength) {
   return string.length >= maxlength;
 }
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
 
-export {getRandomInRange, checkStringLength};
+
+export {getRandomInRange, checkStringLength, isEscapeKey};
