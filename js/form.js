@@ -1,7 +1,7 @@
 import { isEscapeKey } from './util.js';
+import { validateHashTag } from './validation';
 
 const imageUploadButton = document.querySelector('#upload-file');
-const uploadPhotoForm = document.querySelector('.img-upload__form');
 const imageEditorElement = document.querySelector('.img-upload__overlay');
 const uploadCancel = document.querySelector('.img-upload__form').querySelector('#upload-cancel');
 
@@ -38,21 +38,9 @@ const onImageUpload = () => {
   emptyUploadButton();
 };
 
-const validateUploadForm = () => {
-  uploadPhotoForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    const isValid = Pristine.validate();
-
-    if (!isValid) {
-      uploadPhotoForm.setAttribute('disabled');
-    }
-    uploadPhotoForm.removeAttribute('disabled');
-  });
-};
-
 const uploadFile = () => {
   imageUploadButton.addEventListener ('change', onImageUpload);
-  validateUploadForm();
+  validateHashTag();
 };
 
 export { uploadFile };
