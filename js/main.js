@@ -1,3 +1,5 @@
-import './data';
-import './miniatures';
-import './form';
+import './data.js';
+import './miniatures.js';
+import { uploadFile } from './form.js';
+
+uploadFile();
