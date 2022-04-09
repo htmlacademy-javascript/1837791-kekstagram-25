@@ -1,31 +1,9 @@
-
-
-const bigPicture = document.querySelector ('.big-picture');
-
-/* console.log (userCards);
-
-const openBigPicture = () => {
-  bigPicture.classList.remove ('hidden');
-  body.classList.add('modal-open');
-};
-
-const closeBigPicture = () => {
-  bigPicture.classList.add ('hidden');
-  body.classList.remove ('modal-open');
-};
-
-const renderBigPicturePopup = () => {
-  bigPicture.querySelector('img').src
-}; */
-
 import { userCards } from './data.js';
 import { isEscapeKey } from './util.js';
 
-
+const bigPicture = document.querySelector ('.big-picture');
 const usersPhotoList = document.querySelector('.pictures');
 const userPhotoItems = Array.from(usersPhotoList.querySelectorAll('.picture'));
-
-
 const bigPictureImg = bigPicture.querySelector('.big-picture__img').querySelector('img');
 const bigPictureLikes = bigPicture.querySelector('.likes-count');
 const bigPictureCommentsCounter = bigPicture.querySelector('.comments-count');
