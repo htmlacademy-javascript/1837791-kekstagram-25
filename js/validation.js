@@ -35,6 +35,7 @@ pristine.addValidator(inputHashtags, checkSameElements, NOT_UNIQUE_HASHTAG_ERROR
 pristine.addValidator(inputHashtags, checkHashtagSymbols, WRONG_SYMBOLS_HASHTAG_ERROR);
 
 uploadPhotoForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
   const isValid = pristine.validate();
 
   if (!isValid) {
