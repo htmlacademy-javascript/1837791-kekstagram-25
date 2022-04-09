@@ -1,4 +1,4 @@
-import { userCards } from './data';
+import { userCards } from './data.js';
 
 const similarMiniaturesTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const userPhotos = document.querySelector('.pictures');
@@ -14,8 +14,9 @@ function createPhotoItem (photoObject) {
 }
 
 // функция для добавления готовых узлов из шаблонов в DOM
-function createUserElement (photoCards) {
+function renderUserPhoto (photoCards) {
   const similarListFragment = document.createDocumentFragment();
+
   for (const cards of photoCards) {
     const photoElement = createPhotoItem (cards);
     similarListFragment.appendChild(photoElement);
@@ -23,4 +24,4 @@ function createUserElement (photoCards) {
   userPhotos.appendChild(similarListFragment);
 }
 
-createUserElement(userCards);
+renderUserPhoto(userCards);
