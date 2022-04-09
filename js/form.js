@@ -1,5 +1,4 @@
 import { isEscapeKey } from './util.js';
-import { validateHashTag } from './validation';
 
 const imageUploadButton = document.querySelector('#upload-file');
 const imageEditorElement = document.querySelector('.img-upload__overlay');
@@ -40,7 +39,6 @@ const onImageUpload = () => {
 
 const uploadFile = () => {
   imageUploadButton.addEventListener ('change', onImageUpload);
-  validateHashTag();
 };
 
 export { uploadFile };

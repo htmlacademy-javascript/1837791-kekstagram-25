@@ -13,5 +13,9 @@ function checkStringLength(string, maxlength) {
 
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
+const compareElements = (massive) => {
+  const lowerCasedMassive = massive.map((element) => element.toLowerCase());
+  return massive.length === new Set(lowerCasedMassive).size;
+};
 
-export {getRandomInRange, checkStringLength, isEscapeKey};
+export {getRandomInRange, checkStringLength, isEscapeKey, compareElements};
