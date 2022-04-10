@@ -18,7 +18,7 @@ const EXAMPLE_NUMBER = 10;
 // Новый код
 const createComment = (id) => ({
   id,
-  avatar: `img/avatar-${getRandomInRange(0, AVATARS_TOTAL)}.svg`,
+  avatar: `img/avatar-${getRandomInRange(1, AVATARS_TOTAL)}.svg`,
   message: COMMENT_MESSAGES[getRandomInRange(0, COMMENT_MESSAGES.length - 1)],
   name: COMMENT_NAMES[getRandomInRange(0, COMMENT_NAMES.length - 1)],
 });
