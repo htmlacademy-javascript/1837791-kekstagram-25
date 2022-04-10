@@ -14,7 +14,7 @@ function checkStringLength(string, maxlength) {
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
 const compareElements = (arr) => {
-  const lowerCasedArray = arr.map((element) => element.toLowerCase());
+  const lowerCasedArray = arr.map( (element) => element.toLowerCase() );
   return arr.length === new Set(lowerCasedArray).size;
 };
 
