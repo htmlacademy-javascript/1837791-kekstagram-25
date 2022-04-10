@@ -28,10 +28,9 @@ const createPhotoBlock = (id) => ({
   url: `photos/${getRandomInRange(1, 25)}.jpg`,
   description: PHOTO_DESCRIPTIONS[getRandomInRange(0, PHOTO_DESCRIPTIONS.length - 1)],
   likes: getRandomInRange(PHOTO_MIN_LIKES, PHOTO_MAX_LIKES),
-  comments: Array.from({length: getRandomInRange(1, 2)}, (_, index) => createComment(index)),
+  comments: Array.from({length: getRandomInRange(2, 14)}, (_, index) => createComment(index)),
 });
 
-//Функцию написал как понимал. Ту, что приводил в примере я не смог понять и применить.
 function createCards(amount){
   const arr = [];
   for (let i = 0; i <= amount; i++) {
