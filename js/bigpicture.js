@@ -82,20 +82,23 @@ buttonShowMoreComments.addEventListener('click', () => {
   });
 });
 
+document.addEventListener('keydown', (evt) => {
+  if (isEscapeKey(evt)) {
+    closeModal();
+  }
+});
+
 userPhotoItems.forEach((item, i) => {
   item.addEventListener('click', () => {
     renderBigPicture(i);
     bigPictureCommentsShowed.textContent = renderedCommentsList.length - hiddenCommentaryList.length;
 
+    document.addEventListener('keydown', (evt) => {
+      if(isEscapeKey(evt)) {
+        closeModal();
+      }
+    });
   });
-});
-
-document.addEventListener('keydown', (evt) => {
-  evt.preventDefault();
-  if (isEscapeKey(evt)) {
-    evt.preventDefault();
-    closeModal();
-  }
 });
 
 buttonCloseBigPicture.addEventListener('click', (evt) => {
