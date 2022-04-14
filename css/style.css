@@ -710,6 +710,11 @@ main {
   border-radius: 5px;
 }
 
+.form__error-text {
+  padding-bottom: 10px;
+
+  text-transform: lowercase;
+}
 
 /**
  * Кнопка для отправки изображения

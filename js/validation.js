@@ -40,5 +40,6 @@ uploadPhotoForm.addEventListener('submit', (evt) => {
 
   if (!isValid) {
     evt.preventDefault();
+    evt.target.reset();
   }
 });
