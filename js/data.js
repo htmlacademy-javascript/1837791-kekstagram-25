@@ -15,7 +15,6 @@ const AVATARS_TOTAL = 6;
 const MAX_CARDS = 25;
 const EXAMPLE_NUMBER = 10;
 
-// Новый код
 const createComment = (id) => ({
   id,
   avatar: `img/avatar-${getRandomInRange(1, AVATARS_TOTAL)}.svg`,

@@ -18,4 +18,12 @@ const compareElements = (arr) => {
   return arr.length === new Set(lowerCasedArray).size;
 };
 
-export {getRandomInRange, checkStringLength, isEscapeKey, compareElements};
+const debounce = (callback, timeoutDelay) => {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
+export {getRandomInRange, checkStringLength, isEscapeKey, compareElements, debounce};
