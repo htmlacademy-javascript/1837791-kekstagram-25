@@ -4,8 +4,7 @@ const effectSliderValue = uploadPhotoForm.querySelector('.effect-level__value');
 const previewPhoto = uploadPhotoForm.querySelector('.img-upload__preview').querySelector('img');
 const effectFieldset = uploadPhotoForm.querySelector('.effect-level');
 
-
-const filters = {
+const effects = {
   chrome: {
     effect: 'grayscale',
     min: 0,
@@ -57,8 +56,8 @@ effectSlider.noUiSlider.on('update', () => {
   const filterName = previewPhoto.dataset.filterName;
 
   if (filterName) {
-    const effect = filters[filterName].effect;
-    const unit = filters[filterName].unit;
+    const effect = effects[filterName].effect;
+    const unit = effects[filterName].unit;
     previewPhoto.style.filter = `${effect}(${effectSliderValue.value}${unit})`;
   }
 });
@@ -82,7 +81,7 @@ const onEffectsChange = (evt) => {
     previewPhoto.className = `effects__preview--${filterName}`;
     previewPhoto.dataset.filterName = filterName;
 
-    const filter = filters[filterName];
+    const filter = effects[filterName];
     effectFieldset.style.display = 'none';
 
     if (filter) {
